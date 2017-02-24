@@ -101,6 +101,9 @@ class robot:
     #
     
     def move(self, motion): # Do not change the name of this function    
+        steer = motion[0] + random.gauss(0.0,self.steering_noise)
+        distance = motion[1] + random.gauss(0.0, self.distance_noise)
+        
         beta = motion[1]/length*tan(motion[0])
 
         if beta >= 0.001: 

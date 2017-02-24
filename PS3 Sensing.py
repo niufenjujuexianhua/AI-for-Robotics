@@ -103,8 +103,6 @@ class robot:
     
     def sense(self): #do not change the name of this function
         Z = []
-        x = []
-        y = []
         for i in range(len(landmarks)):
             x=landmarks[i][1] - self.x
             y=landmarks[i][0] - self.y
